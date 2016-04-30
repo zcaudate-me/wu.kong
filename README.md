@@ -1,28 +1,26 @@
-# wu.wei(無爲)
+# wu.kong
 
-[![Build Status](https://travis-ci.org/zcaudate/wu.wei.png?branch=master)](https://travis-ci.org/zcaudate/wu.wei)
+[![Build Status](https://travis-ci.org/zcaudate/wu.kong.png?branch=master)](https://travis-ci.org/zcaudate/wu.kong)
 
 an org.eclipse.aether wrapper
 
-> All I need is one life, one try, one breath I'm one man
-> What I stand for speaks for itself, they don't understand
-> Or want to see me on top, too egotistical
-> Talkin all that slick shit, the same way these b*$&$s do
->
-> Nas, One Mic
+![](https://raw.githubusercontent.com/zcaudate/wu.kong/master/monkey.jpg)
+
+    “Nothing in this world is difficult, but thinking makes it seem so. Where there is true will, there is always a way.” 
+    ― Wu Cheng'en, Monkey: A Journey to the West
 
 ### Installation
 
 Add to project.clj dependencies:
 
 ```clojure
-[im.chit/wu.wei "0.1.0"]
+[im.chit/wu.kong "0.1.0"]
 ```
 
 ## Usage
 
 ```clojure
-(require '[wu.wei :as aether])
+(require '[wu.kong :as aether])
 ```
 
 ## Documentation
