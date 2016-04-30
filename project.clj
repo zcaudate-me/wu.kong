@@ -1,5 +1,5 @@
 (defproject im.chit/wu.kong "0.1.0-SNAPSHOT"
-  :description "an org.eclipse.aether wrapper"
+  :description "a wrapper for org.eclipse.aether"
   :url "https://github.com/zcaudate/wu.kong"
   :license {:name "The MIT License"
             :url "http://http://opensource.org/licenses/MIT"}
@@ -14,12 +14,11 @@
                  [org.eclipse.aether/aether-transport-file "1.1.0"]
                  [org.eclipse.aether/aether-transport-classpath "1.1.0"]
                  [org.apache.maven/maven-aether-provider "3.1.0"]
-                 [im.chit/hara.reflect "2.2.17"]
-                 [im.chit/hara.object "2.2.17"]
-                 [im.chit/hara.data.nested "2.2.17"]]
-
-  :java-source-paths ["java"]
+                 [im.chit/hara.reflect "2.3.3"]
+                 [im.chit/hara.object "2.3.3"]
+                 [im.chit/hara.data.nested "2.3.3"]]
   :profiles {:dev {:plugins [[lein-hydrox "0.1.16"]]
                    :dependencies [;[im.chit/lucid "0.9.7"]
                                   [midje "1.6.3"]
-                                  [helpshift/hydrox "0.1.16"]]}})
+                                  ;;[helpshift/hydrox "0.1.16"]
+                                  ]}})

@@ -1,13 +1,11 @@
-# wu.kong (孫悟空)
+# wu.kong (悟空)
 
 [![Build Status](https://travis-ci.org/zcaudate/wu.kong.png?branch=master)](https://travis-ci.org/zcaudate/wu.kong)
 
-    “Nothing in this world is difficult, but thinking makes it 
-     seem so. Where there is true will, there is always a way.” 
-    ― Wu Cheng'en, Monkey: A Journey to the West
-
 ![](https://raw.githubusercontent.com/zcaudate/wu.kong/master/monkey.jpg)
 
+    “If you want to have a future, don't do anything with no future in it.”
+    ― Wu Cheng'en, Monkey: A Journey to the West
 
 ### Installation
 

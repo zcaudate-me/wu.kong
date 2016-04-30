@@ -19,8 +19,6 @@
            [org.eclipse.aether.repository RemoteRepository RemoteRepository$Builder
             LocalRepository]))
 
-(defn )
-
 (def +default-local-repo+
   (io/file (System/getProperty "user.home") ".m2" "repository"))
 
