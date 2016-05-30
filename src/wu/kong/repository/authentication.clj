@@ -1,4 +1,4 @@
-(ns wu.kong.types.authentication
+(ns wu.kong.interop.authentication
   (:require [hara.object :as object])
   (:import [org.eclipse.aether.util.repository
             AuthenticationBuilder

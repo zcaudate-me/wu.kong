@@ -1,9 +1,6 @@
-(ns wu.kong.types.remote-repository
-  (:require [hara.string.case :as case]
-            [hara.reflect :as reflect]
-            [hara.object :as object])
+(ns wu.kong.repository.remote
+  (:require [hara.object :as object])
   (:import [org.eclipse.aether.repository
-            LocalRepository
             RemoteRepository
             RemoteRepository$Builder]))
 
@@ -21,4 +18,3 @@
 
 (comment
   (object/meta-write RemoteRepository$Builder))
-

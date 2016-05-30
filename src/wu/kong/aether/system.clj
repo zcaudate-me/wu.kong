@@ -1,5 +1,4 @@
-(ns wu.wei.repository.system
-  (:require [hara.object :as object])
+(ns wu.kong.aether.system
   (:import [org.apache.maven.repository.internal MavenRepositorySystemUtils]
            [org.eclipse.aether.connector.basic BasicRepositoryConnectorFactory]
            [org.eclipse.aether.spi.connector RepositoryConnectorFactory]
@@ -8,9 +7,7 @@
            [org.eclipse.aether.transport.http HttpTransporterFactory]
            [org.eclipse.aether RepositorySystem]))
 
-(object/extend-maplike RepositorySystem {:tag "repo"})
-
-(defn base-repo-system []
+(defn repository-system []
   (-> (doto (MavenRepositorySystemUtils/newServiceLocator)
         (.addService RepositoryConnectorFactory BasicRepositoryConnectorFactory)
         (.addService TransporterFactory FileTransporterFactory)

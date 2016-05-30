@@ -1,6 +1,7 @@
 # wu.kong (悟空)
 
 [![Build Status](https://travis-ci.org/zcaudate/wu.kong.png?branch=master)](https://travis-ci.org/zcaudate/wu.kong)
+[![Clojars](https://img.shields.io/clojars/v/im.chit/wu.kong.svg)](https://clojars.org/im.chit/wu.kong)
 
 ![](https://raw.githubusercontent.com/zcaudate/wu.kong/master/monkey.jpg)
 
@@ -23,7 +24,7 @@ Add to project.clj dependencies:
 
 ## Documentation
 
-TBD 
+TBD
 
 ## License
 

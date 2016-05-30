@@ -19,7 +19,7 @@
            [org.eclipse.aether.repository RemoteRepository RemoteRepository$Builder
             LocalRepository]))
 
-(def +default-local-repo+
+(defonce +default-local-repo+
   (io/file (System/getProperty "user.home") ".m2" "repository"))
 
 (defn base-repo-system []
@@ -40,7 +40,7 @@
 
 (comment
   (into {} (.& (DefaultArtifact. "org.apache.maven:maven-aether-provider:3.1.0")))
- 
+
 
   (def repo-system
     (-> (doto (MavenRepositorySystemUtils/newServiceLocator)
@@ -49,7 +49,7 @@
           (.addService TransporterFactory HttpTransporterFactory))
         (.getService RepositorySystem)))
 
-  (def local-repo 
+  (def local-repo
     (LocalRepository. default-local-repo))
 
   (.getId local-repo)
@@ -65,14 +65,14 @@
   (.setLocalRepositoryManager session local-repo-manager)
 
   (-> (.& session) keys)
-  
+
   (def ^{:private true} default-local-repo
     (io/file (System/getProperty "user.home") ".m2" "repository"))
 
   (def artifact
     (DefaultArtifact. "org.eclipse.aether:aether-impl:1.0.0.v20140518"))
 
-  
+
   (def request
     (doto (CollectRequest.)
       (.setRoot (Dependency. artifact JavaScopes/COMPILE))
@@ -89,7 +89,7 @@
   (.getDependency (.getRoot deps))
 
   (.getChildren (.getRoot deps))
-  
+
 
 
   CollectRequest collectRequest = new CollectRequest();
@@ -101,5 +101,3 @@
   List<ArtifactResult> artifactResults =
   system.resolveDependencies( session, dependencyRequest ).getArtifactResults();
 )
-
-
