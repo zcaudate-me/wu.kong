@@ -23,6 +23,21 @@
   ([] (map->Aether +defaults+))
   ([config] (map->Aether ())))
 
+(defn flatten-values
+  [node]
+  (cond (map? node)
+        (cons (key (first node))
+                    (flatten-values (val (first node))))
+        
+        (vector? node)
+        (mapcat (fn [item]
+                  (cond (map? item)
+                        (flatten-values item)
+
+                        (vector? item)
+                        [item]))
+                node)))
+
 (defn resolve-dependencies
   ([coords]
    (resolve-dependencies (aether) coords))
