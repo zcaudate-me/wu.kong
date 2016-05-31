@@ -25,12 +25,8 @@
 
 (defn artifact
   [rep]
-  (vector? rep) (artifact->vector rep)
-  (string? rep) (artifact->string rep)
-  (instance? Artifact rep) artifact
-  :else (throw (Exception. (str "Cannot convert " rep " to artifact."))))
-
-(comment
-  (str (artifact<-vector '[midje "1.6.3"]))
-
-  )
+  (cond
+    (vector? rep) (artifact<-vector rep)
+    (string? rep) (artifact<-string rep)
+    (instance? Artifact rep) artifact
+    :else (throw (Exception. (str "Cannot convert " rep " to artifact.")))))
