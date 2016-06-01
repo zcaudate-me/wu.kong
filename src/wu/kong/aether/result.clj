@@ -11,15 +11,13 @@
                        (not (= (first (artifact/artifact->vector ca))
                                'org.clojure/clojure)))))
   ([^DependencyNode node pred]
-   (let [artifact (.getArtifact node)
-         children (filter (fn [c]
+   (let [children (filter (fn [c]
                             (let [ca (.getArtifact c)]
                               (pred ca)))
-                          (.getChildren node))
-         coords (artifact/artifact->vector artifact)]
-     (if (empty? children)
-       coords
-       {coords (mapv dependency-graph children)}))))
+                          (.getChildren node))]
+     (-> (.getArtifact node)
+         (artifact/artifact->vector)
+         (hash-map (mapv dependency-graph children))))))
 
 (defmulti summary type)
 
