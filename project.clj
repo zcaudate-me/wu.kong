@@ -1,4 +1,4 @@
-(defproject im.chit/wu.kong "0.1.1"
+(defproject im.chit/wu.kong "0.1.2"
   :description "a wrapper for org.eclipse.aether"
   :url "https://github.com/zcaudate/wu.kong"
   :license {:name "The MIT License"

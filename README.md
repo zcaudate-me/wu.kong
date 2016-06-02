@@ -15,7 +15,7 @@
 Add to project.clj dependencies:
 
 ```clojure
-[im.chit/wu.kong "0.1.1"]
+[im.chit/wu.kong "0.1.2"]
 ```
 
 ## Usage
