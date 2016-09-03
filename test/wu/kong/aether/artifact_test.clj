@@ -1,18 +1,16 @@
 (ns wu.kong.aether.artifact-test
-  (:use midje.sweet)
+  (:use hara.test)
   (:require [wu.kong.aether.artifact :refer :all])
   (:import [org.eclipse.aether.artifact Artifact  DefaultArtifact]))
 
 ^{:refer wu.kong.aether.artifact/artifact->vector :added "0.1"}
 (fact "converts an artifact to the clojure vector notation"
-  (-> (DefaultArtifact. "midje:midje:1.6.3")
+  (-> (DefaultArtifact. "im.chit:hara.test:2.4.0")
       (artifact->vector))
-  => '[midje/midje "1.6.3"])
+  => '[im.chit/hara.test "2.4.0"])
 
 ^{:refer wu.kong.aether.artifact/artifact<-vector :added "0.1"}
 (fact "converts an artifact to the clojure vector notation"
-  (-> (artifact<-vector '[midje "1.6.3"])
+  (-> (artifact<-vector '[im.chit/hara.test "2.4.0"])
       (str))
-  => "midje:midje:jar:1.6.3")
-
-
+  => "im.chit:hara.test:jar:2.4.0")

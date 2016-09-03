@@ -1,5 +1,5 @@
 (ns wu.kong-test
-  (:use midje.sweet)
+  (:use hara.test)
   (:require [wu.kong :as aether]))
 
 (comment
@@ -12,8 +12,8 @@
   (.? org.eclipse.aether.RepositorySystem :name)
   ("collectDependencies" "deploy" "install" "newDeploymentRepository" "newLocalRepositoryManager" "newResolutionRepositories" "newSyncContext" "readArtifactDescriptor" "resolveArtifact" "resolveArtifacts" "resolveDependencies" "resolveMetadata" "resolveVersion" "resolveVersionRange")
 
-  (execute
-   (system {:local-repo
+  (execute	
+   (system {:local-repo ...
             :repositories {"central" ...
                            "clojars" ...}})
    {:type :collect-dependencies

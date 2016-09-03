@@ -1,5 +1,5 @@
 (ns wu.wei-test
-  (:use midje.sweet)
+  (:use hara.test)
   (:require [wu.wei :refer :all]))
 
 (fact "hello there"
