@@ -1,7 +1,7 @@
 # wu.kong (悟空)
 
 [![Build Status](https://travis-ci.org/tahto/wu.kong.png?branch=master)](https://travis-ci.org/tahto/wu.kong)
-[![Clojars](https://img.shields.io/clojars/v/im.chit/wu.kong.svg)](https://clojars.org/im.chit/wu.kong)
+[![Clojars](https://img.shields.io/clojars/v/tahto/wu.kong.svg)](https://clojars.org/tahto/wu.kong)
 
 ![](https://raw.githubusercontent.com/tahto/wu.kong/master/monkey.jpg)
 
@@ -15,7 +15,7 @@
 Add to project.clj dependencies:
 
 ```clojure
-[tahto/wu.kong "0.1.3"]
+[tahto/wu.kong "0.1.4"]
 ```
 
 ## Usage
